@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<title>EYE DOCTOR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> 
+<script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+<script src="{{ url_for('static', filename='upload.js') }}"></script> 
+
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url('static/home.jpg');
+  min-height: 80%;
+  top:8%;
+}
+ /* button {
+      background-color: red;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      width: 20%;
+ } */
+ .FormFill{
+ 	margin-bottom: 20px;
+ }
+.formcontainer {
+      text-align: left;
+      margin: 5px 5px 5px;
+      }
+.container {
+    padding: 16px 0;
+    text-align:left;
+}
+
+.question {
+    padding: 0 0 5px;
+    color: #095484;
+ }
+.question-answer label {
+    display: block;
+    padding: 0 20px 10px 0;
+}
+
+.menu {
+  display: none;
+}
+
+#fileinput {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top w3-row w3-padding w3-blue ">
+  <!-- <div class="w3-row w3-padding"> -->
+    <!-- <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;"> -->
+      <a href="#home" class="w3-bar-item w3-button" style="display: inline;">
+        <img src="static\dell.png" 
+          height="40px" width="40px"/> 
+          EYE DOCTOR
+      </a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small" style="display: inline; top: 5%;">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#questionnaire" class="w3-bar-item w3-button">Questionnaire</a>
+        <a href="#checkup" class="w3-bar-item w3-button">Check Up</a>
+      </div>
+    <!-- </div> -->
+ 
+    <!-- <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-blue">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#questionnaire" class="w3-button w3-block w3-blue">QUESTIONNAIRE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#checkup" class="w3-button w3-block w3-blue">CHECK UP</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-blue">HELP</a>
+    </div>
+  </div> -->
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:950px">
+    <h2 class="w3-center w3-padding-64"><span class="question"> ABOUT EYE DOCTOR</span></h2>
+    <p>Eyes are our window to the world around us. Hence taking good care of them is of utmost importance. Owing to our busy lifestyle, we tend to give less importance to eye care and end up delaying checkups with the doctor until its too late. Progression of these eye diseases can only be prevented if they are recognized accurately at an early stage. Our idea is based on the saying “Prevention is better than cure”, where we would like to provide an easy approach for automated eye disease recognition using digital image processing and machine learning techniques such as deep convolution neural network (DCNN). The unique feature here is the fact that this eye checkup facility can be used by anyone with a Dell laptop/computer as a desktop application.
+</p>
+  </div>
+</div>
+
+<!-- questionnaire Container -->
+<div class="w3-container" id="questionnaire">
+  <div class="w3-content" style="max-width:950px">
+ 
+    <h2 class="w3-center w3-padding-35"><span class="question">QUESTIONNAIRE</span></h2>
+    <h4>Please fill the questionnaire !</h4>
+       <p class="question">Do you have clouded, blurred or dim vision?</p>
+        <label><input type="radio" value="none" name="visited" /> Yes</label>
+          <label><input type="radio" value="none" name="visited" /> No</label><br>
+        <p class="question">Are you experiencing increasing difficulty with vision at night?</p>
+        <label><input type="radio" value="none" name="visited" /> Yes</label>
+          <label><input type="radio" value="none" name="visited" /> No</label><br>
+        <p class="question">Do you feel your sensitivity to light and glare has increased?</p>
+     <label><input type="radio" value="none" name="visited" /> Yes</label>
+          <label><input type="radio" value="none" name="visited" /> No</label><br>
+        <p class="question">Have you started using a brighter light for reading and other activities?</p>
+      <label><input type="radio" value="none" name="visited" /> Yes</label>
+          <label><input type="radio" value="none" name="visited" /> No</label><br>
+        <p class="question">Are you seeing "halos" around lights?</p>
+        <label><input type="radio" value="none" name="visited" /> Yes</label>
+          <label><input type="radio" value="none" name="visited" /> No</label><br>
+        <p class="question">Have you been frequently changing your eyeglass or contact lens prescription?</p>
+       <label><input type="radio" value="none" name="visited" /> Yes</label>
+          <label><input type="radio" value="none" name="visited" /> No</label><br>
+        <p class="question">Are you seeing fading or yellowing of colors?</p>
+          <label><input type="radio" value="none" name="visited" /> Yes</label>
+          <label><input type="radio" value="none" name="visited" /> No</label><br>
+        
+        <button type="submit">Submit</button> 
+   </div>
+</div>
+
+<!-- Check up Container -->
+<div class="w3-container" id="checkup" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:950px">
+    <h2 class="w3-center w3-padding-48"><span class="question">CHECK UP</span></h2>
+    <p>Your health is important to us !</p>
+    <p>•	Cataracts - cloudy area that forms in the lens of the eye<br>
+•	Trachoma -  breakdown of the outer surface or cornea of the eyes<br>
+•	Conjunctivitis - whites of your eyes to appear reddish or pink<br>
+•	Corneal ulcer - small crater (ulcer) on the front part of the eye<br>
+•	Ectropion – bottom eye lid turns out<br>
+•	Periorbital cellulitis – soft tissue around eye and eyelid<br>
+•	Bitot’s spot of vitamin A deficiency – drying of cornea
+</p>
+
+<h3 class="w3-center w3-padding-30">Fill your details !</h3>
+
+<div .w3-container style="justify-content: space-evenly;">
+
+
+
+  <div lg-6 xs-12 style="display: inline-block; width: 50%; justify-content: center;">
+    <form action="http://127.0.0.1:5000/uploader" method="POST" enctype="multipart/form-data">
+
+      <div class="formcontainer">
+        <hr/>
+        <div class="container">
+          <label for="uname" class="FormFill"><strong>Name</strong></label><br>
+          <input type="text" class="FormFill" placeholder="Enter Name" name="uname" required><br>
+          <label for="psw" class="FormFill"><strong>Age</strong></label><br>
+          <input type="Age" class="FormFill" placeholder="Enter Age" name="psw" required><br>
+          <label for="psw" class="FormFill"><strong>Email</strong></label><br>
+          <input type="Email" class="FormFill" placeholder="Enter Email" name="psw" required><br>
+
+          
+          <button class="w3-button" style="background-color:#2196F3;" type="submit" formaction="http://127.0.0.1:5000/takephoto">Scan Image and Submit</button><br>
+          <p style="position: relative; left: 22%;">or</p>
+          <label for="fileinput" class="w3-button" style=" left: 10%; background-color:#2196F3; cursor:pointer;">Upload Image</label>
+          <input id="fileinput" type='file' name='file' onchange="readURL(this);" /> 
+        <button  type="submit"
+          class="w3-button" 
+          style="background-color:#2196F3"
+          onclick="">
+          Submit
+        </button> 
+        </div>
+      </div>
+    </form>
+  </div>
+  <div lg-6 xs-12 style="display: inline-flex; float: right; width: 50%; vertical-align: middle;padding-top: 8%;">
+    
+    <img id="default" src="static/userdefault.png" height="47%" width="30%" style="position: relative; top: 0%; left: 0%;"/>
+    <img id="blah" src="#" alt="no image" style="position: relative; top: 0%; left:-30%"/> 
+  </div>
+</div>
+</div>
+
+
+
+<!-- End page content -->
+</div>
+
+
+
+<script>
+</script>
+
+</body>
+</html>

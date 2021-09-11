@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<title>EYE DOCTOR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("static/home.jpg");
+  min-height: 80%;
+}
+ /* button {
+      background-color: red;
+      color: white;
+      padding: 14px 0;
+      margin: 10px 0;
+      border: none;
+      width: 20%;
+ } */
+ .FormFill{
+ 	margin-bottom: 20px;
+ }
+.formcontainer {
+      text-align: left;
+      margin: 5px 5px 5px;
+      }
+.container {
+    padding: 16px 0;
+    text-align:left;
+}
+
+.question {
+    padding: 0 0 5px;
+    color: #095484;
+ }
+.question-answer label {
+    display: block;
+    padding: 0 20px 10px 0;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top w3-row w3-padding w3-blue  ">
+  <!-- <div class="w3-row w3-padding"> -->
+    <!-- <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;"> -->
+      <a href="#home" class="w3-bar-item w3-button">
+        <img src="static/dell.png" 
+          height="50px" width="50px"/> 
+          EYE DOCTOR
+      </a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#questionnaire" class="w3-bar-item w3-button">Questionnaire</a>
+        <a href="#checkup" class="w3-bar-item w3-button">Check Up</a>
+      </div>
+    <!-- </div> -->
+ 
+    <!-- <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-blue">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#questionnaire" class="w3-button w3-block w3-blue">QUESTIONNAIRE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#checkup" class="w3-button w3-block w3-blue">CHECK UP</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-blue">HELP</a>
+    </div>
+  </div> -->
+</div>
+
+<!-- Header with image -->
+
+
+<!-- Add a background color and large text to the whole page -->
+
+<!-- About Container -->
+
+
+<!-- questionnaire Container -->
+<!-- onclick="document.getElementById('id01').style.display='none'"  -->
+
+
+    <div  class="w3-modal" style="padding-top: 200px; display: block;">
+        <div class="w3-modal-content w3-card-4">
+            <header class="w3-container w3-blue"> 
+            <span 
+            class="w3-button w3-display-topright">
+                <a href="http://127.0.0.1:5000/" class="w3-bar-item w3-button">&times;</a></span>
+            <h2>Your results</h2>
+            </header>
+        <div class="w3-container">
+            <p>left eye - {{ e1 }}</p>              
+            <p>right eye - {{ e2 }}</p>     
+        </div>        
+        </div>
+    </div>
+
+<!-- End page content -->
+
+
+
+
+<script>
+</script>
+
+</body>
+</html>
